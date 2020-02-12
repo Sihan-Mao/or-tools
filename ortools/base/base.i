@@ -92,6 +92,22 @@ PRIMITIVE_TYPEMAP(unsigned long int, long long);
 
 #endif // defined(SWIGJAVA)
 
+
+#if defined(SWIGCSHARP)
+// same issue in csharp see csharp/typenames.i and csharp/csharp.swg
+// note: csharp provide `long` and `ulong` types.
+#if defined(SWIGWORDSIZE64)
+%define PRIMITIVE_TYPEMAP(NEW_TYPE, TYPE)
+%clear NEW_TYPE;
+%apply TYPE { NEW_TYPE };
+%enddef // PRIMITIVE_TYPEMAP
+PRIMITIVE_TYPEMAP(long int, long long);
+PRIMITIVE_TYPEMAP(unsigned long int, unsigned long long);
+#undef PRIMITIVE_TYPEMAP
+#endif // defined(SWIGWORDSIZE64)
+
+#endif // defined(SWIGCSHARP)
+
 // SWIG macros for explicit API declaration.
 // Usage:
 //
