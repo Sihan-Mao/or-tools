@@ -14,10 +14,9 @@
 // TODO(user): Refactor this file to adhere to the SWIG style guide.
 
 %include "enums.swg"
-%include "stdint.i"
-%include "std_vector.i"
 
 %include "ortools/base/base.i"
+%include "std_vector.i"
 %include "ortools/util/csharp/vector.i"
 
 // Include the file we want to wrap a first time.

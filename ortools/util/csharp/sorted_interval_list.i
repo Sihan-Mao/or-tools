@@ -17,7 +17,6 @@ using System.Runtime.InteropServices;
 using System.Collections;
 %}
 
-%include "stdint.i"
 %include "std_vector.i"
 
 %include "ortools/base/base.i"

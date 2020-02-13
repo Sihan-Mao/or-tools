@@ -21,7 +21,7 @@ using System.Collections.Generic;
 %}
 
 %include "enumsimple.swg"
-%include "stdint.i"
+
 %include "exception.i"
 %include "std_vector.i"
 %include "std_common.i"
