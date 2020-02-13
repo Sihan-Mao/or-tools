@@ -16,7 +16,6 @@
 %include "enums.swg"
 
 %include "ortools/base/base.i"
-%include "std_vector.i"
 %include "ortools/util/csharp/vector.i"
 
 // Include the file we want to wrap a first time.
@@ -27,10 +26,10 @@
 // See the comment in
 // ../../constraint_solver/csharp/constraint_solver.i about naming
 // the template instantiation of std::vector<> differently.
-%template(KInt64Vector) std::vector<int64>;
-%template(KInt64VectorVector) std::vector<std::vector<int64> >;
-VECTOR_AS_CSHARP_ARRAY(int64, int64, long, KInt64Vector);
-REGULAR_MATRIX_AS_CSHARP_ARRAY(int64, int64, long, KInt64VectorVector);
+// %template(KInt64Vector) std::vector<int64>;
+// %template(KInt64VectorVector) std::vector<std::vector<int64> >;
+// VECTOR_AS_CSHARP_ARRAY(int64, int64, long, KInt64Vector);
+// REGULAR_MATRIX_AS_CSHARP_ARRAY(int64, int64, long, KInt64VectorVector);
 
 %rename (UseReduction) operations_research::KnapsackSolver::use_reduction;
 %rename (SetUseReduction) operations_research::KnapsackSolver::set_use_reduction;
